@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SistemaEscolar" basedir="." default="run" xmlns:jnlp="http://www.netbeans.org/ns/jnlp/3">
+    <description>NetBeans IDE Project for SistemaEscolar</description>
+
+    <!-- Target to compile the project -->
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <!-- Target to run the project -->
+    
+<target name="run" depends="compile">
+    <java classname="MenuPrincipal" classpath="build/classes:${basedir}/lib/mysql-connector-j-8.1.0.jar">
+        <classpath>
+            <pathelement path="build/classes"/>
+            <pathelement path="${basedir}/lib/mysql-connector-j-8.1.0.jar"/>
+        </classpath>
+    </java>
+</target>
+ depends="compile">
+        <java classname="MenuPrincipal" classpath="build/classes">
+            <classpath>
+                <pathelement path="build/classes"/>
+            </classpath>
+        </java>
+    </target>
+</project>
